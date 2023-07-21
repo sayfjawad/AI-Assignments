@@ -39,7 +39,7 @@ def plot_scatter_line(x, y, x_train, y_train):
 
 # load training data
 # read data from .csv file (this returns an object of DataFrame)
-df = pd.read_csv('usa_housing_training.csv')
+df = pd.read_csv('../assignment2/usa_housing_training.csv')
 
 # only train necessary columns
 x_train = df[['avg_area_income']]

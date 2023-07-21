@@ -96,7 +96,7 @@ def grad_descent(x, y, learningRate, threshold, maxIters):
 
 ### LOAD TRAINING DATA
 
-df = pd.read_csv('usa_housing_training.csv')
+df = pd.read_csv('../assignment2/usa_housing_training.csv')
 
 # Input features
 x_train = df[['avg_area_income', 'area_population']]
