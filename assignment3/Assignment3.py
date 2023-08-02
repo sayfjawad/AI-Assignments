@@ -109,12 +109,12 @@ x_train = x_train.to_numpy()
 y_train = y_train.to_numpy()
 
 # Feature scaling (see the previous assignment)
-x_train = x_train / np.max(abs(x_train), axis=0)
+x_train_normalized = x_train / np.max(abs(x_train), axis=0)
 
 # Append the bias column x0 = 1 to the left side of the input matrix (see lecture)
-x_train = np.append(np.ones((len(x_train), 1)), x_train, axis=1)
+x_train_normalized = np.append(np.ones((len(x_train), 1)), x_train_normalized, axis=1)
 
-x_train
+x_train_normalized
 
 ### FIND THE PARAMETERS
 
@@ -123,7 +123,7 @@ threshold = 0.001
 maxIters = 10000
 
 # Run gradient descent
-phi = grad_descent(x_train, y_train, learningRate, threshold, maxIters)
+phi = grad_descent(x_train_normalized, y_train, learningRate, threshold, maxIters)
 
 # If your implementation is correct, you will find
 # phi = [[-782515.45192716] [2315296.12541882] [1042161.60848601]] after running 3853 iterations
@@ -148,3 +148,4 @@ y_test = df_test[['house_price']].to_numpy()
 # If your implementation is correct, you should
 # get cost = 34937094596.78
 ###############################################
+
