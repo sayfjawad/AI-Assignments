@@ -43,3 +43,8 @@ print(f"Predicted House Price: ${predicted_price1:.2f}")
 example_features2 = [79545.45, 5.68, 3.00, 4.09, 23086.80, 37010]
 predicted_price2 = predict_house_price(example_features2)
 print(f"Predicted House Price: ${predicted_price2:.2f}")
+
+# Example prediction
+example_features3 = [69330.7412198286,7.31890726044295,6.25275735774548,2,30097.8355904924, 76937]
+predicted_price3 = predict_house_price(example_features3)
+print(f"Predicted House Price: ${predicted_price3:.2f}")
