@@ -16,3 +16,8 @@ encoded_values = encoder.transform(test_labels)
 
 print("\nLabels = ", test_labels)
 print("Encoded values =", list(encoded_values))
+
+new_encoded_values = [3, 0, 4, 1]
+decoded_values = encoder.inverse_transform(new_encoded_values)
+print("\nLabels = ", test_labels)
+print("Decoded values =", list(decoded_values))
